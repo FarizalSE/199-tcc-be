@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.get('/token', refreshToken);
 
-router.get("/notes", verifyToken, getNotes);
+router.get("/notes", getNotes);
 router.get("/notes/:id", verifyToken, getNotesById);
 router.post("/add-notes", verifyToken, createNotes);
 router.put("/edit-notes/:id", verifyToken, updateNotes);
