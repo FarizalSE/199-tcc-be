@@ -12,7 +12,7 @@ dotenv.config();
 
 app.use(cookieParser());
 app.use(cors());
-app.get("/", (req, res) => res.render("index"));
+app.get("/"), (req, res) => res.render("index");
 app.use(express.json());
 app.use(NotesRoute, UserRoute);
 

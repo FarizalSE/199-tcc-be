@@ -1,5 +1,7 @@
 import express from "express";
 import { getNotes, createNotes, updateNotes, deleteNotes, getNotesById } from "../controllers/NotesController.js";
+import { refreshToken } from "../controllers/RefreshToken.js";
+import { verifyToken } from "../middleware/VerifyToken.js";
 
 const router = express.Router();
 
