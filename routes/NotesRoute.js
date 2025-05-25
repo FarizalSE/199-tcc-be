@@ -7,9 +7,9 @@ const router = express.Router();
 router.get('/token', refreshToken);
 
 router.get("/notes", verifyToken, getNotes);
-router.get("/notes/:id", getNotesById);
-router.post("/add-notes", createNotes);
-router.put("/edit-notes/:id", updateNotes);
-router.delete("/delete-notes/:id", deleteNotes);
+router.get("/notes/:id", verifyToken, getNotesById);
+router.post("/add-notes", verifyToken, createNotes);
+router.put("/edit-notes/:id", verifyToken, updateNotes);
+router.delete("/delete-notes/:id", verifyToken, deleteNotes);
 
 export default router;
